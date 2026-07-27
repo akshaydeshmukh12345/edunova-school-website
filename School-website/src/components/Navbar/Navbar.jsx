@@ -12,14 +12,17 @@ function Navbar() {
       </div>
 
       <nav className={menuOpen ? "nav-links active" : "nav-links"}>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#academics">Academics</a>
-        <a href="#facilities">Facilities</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+        <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+        <a href="#academics" onClick={() => setMenuOpen(false)}>Academics</a>
+        <a href="#facilities" onClick={() => setMenuOpen(false)}>Facilities</a>
+        <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
 
-        <button className="apply-btn">
+        <button
+          className="apply-btn"
+          onClick={() => setMenuOpen(false)}
+        >
           Apply Now
         </button>
       </nav>

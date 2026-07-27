@@ -10,11 +10,11 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
+  const preventNavigation = (e) => e.preventDefault();
+
   return (
     <footer className="footer">
-
       <div className="footer-container">
-
         {/* School Info */}
         <div className="footer-column">
           <h2>EduNova</h2>
@@ -26,16 +26,23 @@ function Footer() {
           </p>
 
           <div className="social-icons">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaYoutube /></a>
+            <a href="/" onClick={preventNavigation} aria-label="Facebook">
+              <FaFacebookF />
+            </a>
+            <a href="/" onClick={preventNavigation} aria-label="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="/" onClick={preventNavigation} aria-label="LinkedIn">
+              <FaLinkedinIn />
+            </a>
+            <a href="/" onClick={preventNavigation} aria-label="YouTube">
+              <FaYoutube />
+            </a>
           </div>
         </div>
 
         {/* Quick Links */}
         <div className="footer-column">
-
           <h3>Quick Links</h3>
 
           <ul>
@@ -45,12 +52,10 @@ function Footer() {
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-
         </div>
 
         {/* Contact */}
         <div className="footer-column">
-
           <h3>Contact</h3>
 
           <p><FaMapMarkerAlt /> MP Nagar, Bhopal, Madhya Pradesh</p>
@@ -58,15 +63,12 @@ function Footer() {
           <p><FaPhoneAlt /> +91 00000 00000</p>
 
           <p><FaEnvelope /> admissions@edunova.edu</p>
-
         </div>
-
       </div>
 
       <div className="footer-bottom">
         © 2026 EduNova International School. All Rights Reserved.
       </div>
-
     </footer>
   );
 }

@@ -1,74 +1,99 @@
-.latest-news{
-    padding:100px 10%;
-    background:#ffffff;
+.latest-news {
+  padding: 100px 10%;
+  background: #ffffff;
 }
 
-.latest-news h5{
-    text-align:center;
-    color:#f4b400;
-    letter-spacing:2px;
-    margin-bottom:10px;
+.latest-news h5 {
+  text-align: center;
+  color: #f4b400;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-.latest-news h2::after{
-    content:"";
-    display:block;
-    width:80px;
-    height:4px;
-    background:#f4b400;
-    margin:18px auto 0;
-    border-radius:20px;
+.latest-news h2 {
+  text-align: center;
+  font-size: 42px;
+  color: #0d1b2a;
+  margin-bottom: 60px;
 }
 
-.news-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+.latest-news h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f4b400;
+  margin: 18px auto 0;
+  border-radius: 20px;
 }
 
-.news-card{
-    transition:0.4s ease;
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
 }
 
-.news-card:hover{
-    transform:translateY(-12px);
-    box-shadow:0 25px 45px rgba(0,0,0,.15);
+.news-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
 }
 
-.news-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
 }
 
-.news-content{
-    padding:25px;
+.news-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-.date{
-    color:#f4b400;
-    font-weight:600;
-    font-size:14px;
+.news-content {
+  padding: 25px;
 }
 
-.news-content h3{
-    margin:15px 0;
-    color:#0d1b2a;
+.news-date {
+  color: #f4b400;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.news-content p{
-    color:#666;
-    line-height:1.7;
-    margin-bottom:20px;
+.news-content h3 {
+  margin: 15px 0;
+  color: #0d1b2a;
 }
 
-.news-content a{
-    color:#0d1b2a;
-    font-weight:600;
-    text-decoration:none;
-    transition:.3s;
+.news-content p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
-.news-content a:hover{
-    color:#f4b400;
+.news-content a {
+  color: #0d1b2a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.news-content a:hover {
+  color: #f4b400;
+}
+
+@media (max-width: 768px) {
+  .latest-news {
+    padding: 70px 20px;
+  }
+
+  .latest-news h2 {
+    font-size: 32px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
 }
